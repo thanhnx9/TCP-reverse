@@ -1,0 +1,83 @@
+video demo TCP reverse shell attack
+
+
+Môi tru?ng:
+bao g?m 3 máy:
++) 1 máy ?o ubuntu< du?c cài d?t ossec=>theo dõi và giám sát
+n?n nhân>
+IP: 192.168.134.12
++) 1 máy ?o centos 7<n?n nhân>
+IP: 192.168.134.15
++) máy th?t win 10<k? t?n công>
+IP: 192.168.134.77
+
+CH? d? m?ng trên máy ?o:
+host-only adapter=> cài d?t IP tinh trên network adapter
+ki?m tra
+=> dã thông m?ng
+
+
+? dây, máy b? t?n công dã b? l?a t?i 1 t?p có tên là client.py
+
+dây là n?i dung client
+connect()=> du?c truy?n vào chính là giá tr? c?a hàm bind() trong server
+và address là d?a ch? local, IP c?a k? t?n công, k? t?n công m? c?ng 8080.
+
+th? nghi?m:
+
++) chúng ta s? ch?y server trên máy t?n công
+lúc này server dã ch?y và m? c?ng 8080 và l?ng nghe
+
+
+khi n?n nhân ch?y client.py<t?p tin t?i v?> thì:
+lúc này server dã th?y có k?t n?i, ch?p nh?n
+
+
+và bây gi? m?t ti?n trình ch?y ng?m trên máy n?n nhân dã ch?y 
+
+k? t?n công có th? g?i các l?nh command line d? th?c hi?n l?y thông tin trên máy n?n nhân
+ho?c làm gì dó mà k? t?n công mu?n.....
+
+
+=>Máy n?n nhân b? chi?m quy?n di?u khi?n
+
+
+
+Và bây gi? quan sát log mà ossec b?t du?c nhé!!!
+
+
+không có gì c?
+
+b?i ossec ch? có th? theo dõi, check các xác th?c...
+d?i v?i TCP reverse k? t?n công chi?m quy?n di?u khi?n và m? m?t ti?n trình cmd ch?y ng?m
+ossec ko th? quan sát....
+
+chúng ta có th? thi?t l?p lu?t cho ossec và quan sát trong ph?n ti?p theo.
+
+
+
+
+C?m on các b?n dã xem....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
